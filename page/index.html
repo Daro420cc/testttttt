@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body style="width: 100%;height:2000px">
+    <span id="top"></span>
+    <header>
+        <div class="head-nav w-100 d-flex " style="height: 80px;background-color:#B02A37;">
+            <div class="navbar h-100  d-flex justify-content-center align-items-center" style="width: 40%; ">
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link text-light" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown ms-4">
+                        <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Category</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#category">Fast Food</a></li>
+                            <li><a class="dropdown-item" href="#category">Spagetti</a></li>
+                            <li><a class="dropdown-item" href="#category">Drink</a></li>
+                            <li><a class="dropdown-item" href="#category">Cake</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#combo">Others</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link text-light" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title h-100 d-flex justify-content-center align align-items-center text-light"
+                style="width: 20%;">
+                <h4 class="fs-1"><i>KANZ.</i></h4>
+            </div>
+            <div class="option h-100 d-flex" style="width: 40%;">
+                <div class="iicon w-50 h-100  position-relative d-flex justify-content-center align-items-center gap-2 fs-5 text-light">
+                    <i id="bell" class="fa-regular fa-bell"></i>
+                    <i id="heart" class="fa-regular fa-heart "></i>
+                    <i id="cart" class="fa-solid fa-cart-shopping"></i>
+                    <div id="cricle-count" class="position-absolute bg-danger rounded-circle d-none" style="width: 15px;height: 15px; top: 23px; right: 75px;">
+                        <p id="count" style="font-size: 12px; text-align: center;">0</p>
+                    </div>
+                </div>
+                <div id="pf-blog" class="d-flex gap-4 align-items-center position-absolute d-none " style="right: 80px;top: 13px;">
+                    <div class="bg-info rounded-circle" style="width: 40px;height: 40px;">
+                        <img id="image" class="w-100 h-100 rounded-circle" src="" alt="">
+                    </div>
+                    <div style="line-height: 0.5;margin-top: 9px;">
+                     <h3 class="name-pf fs-5 text-light">fff</h3>
+                     <p style="font-size: 13px;color: rgb(211, 210, 210);">User.</p>
+                    </div>
+                    <i id="leave-icon" class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <div class="login-btn w-50 h-100 d-flex justify-content-center align-items-center gap-3">
+                    <button class="btn btn-dark" id="btn-log" onclick="showForm()" style="width: 120px;height: 50px;">LOGIN</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="form-base">
+        <form action="" id="form" class="bg-light shadow rounded-3 position-absolute z-2 p-3 d-none" style="width: 350px;height: 400px;top:230px;left:600px;">
+            <h3 class="text-center">LOGIN ACCOUNT</h3>
+            <label for="">Username</label><br>
+            <input id="uName" class="form-control" type="text" placeholder="Enter Username"> <br>
+            <label for="">Email</label><br>
+            <input id="email" class=" form-control" type="email" placeholder="Enter Email"><br>
+            <label for="">Password</label><br>
+            <input id="pw" class=" form-control" type="password" placeholder="Enter Password"> <br>
+            <input id="file" form="form-control"  type="file"> <br>
+            <button class="btn btn-danger w-100 mt-2" onclick="closeForm()" type="submit">Login</button>
+        </form>
+    </div>
+    <!--main image-->
+    <main>
+        <div class="main w-100 bg-primary" style="height: 730px;">
+            <div class="shadow w-100 h-100 position-relative" style="background-color: rgba(0, 0, 0, 0.526);">
+                <div class="position-absolute  text-light d-flex flex-column justify-content-center align-items-center "
+                    style="width: 470px;height: 400px;top: 100px;left: 570px;">
+                    <h1 class="text-center" style="font-size: 50px; ">Welcome To KENZ.</h1>
+                    <p class="ms-3">The Dishes give you a Good food, Good mood and Unforgettable flavor.</p>
+                    <a href="#mid-sale"><button class="btn btn-outline-danger">Let's Order now </button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--About us-->
+    <article>
+        <div id="about" class="about-us w-100  d-flex" style="height: 400px;">
+            <div  class="picture  position-relative h-100  d-flex align-items-center justify-content-center"
+                style="width: 40%;">
+                <div class="main-img bg-danger mt-5 "
+                    style="width: 320px;height: 320px;border-radius: 50px 0px 60px 20px;">
+                    <img class="w-100 h-100 " style="border-radius: 50px 0px 60px 20px;" src="../img/buger.jpg" alt="">
+                </div>
+                <div class="small-img position-absolute border border-danger rounded-circle"
+                    style="width: 100px;height: 100px; top: 40px;right: 110px;">
+                    <img class="w-100 h-100 rounded-circle" src="../img/pizza.jpg" alt="">
+                </div>
+            </div>
+            <div class="paragrah h-100 p-3 d-flex  flex-column justify-content-center" style="width: 60%;">
+                <h1>About <span class="text-danger fw-bold">Us</span></h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa nisi exercitationem cupiditate, optio
+                    voluptatum beatae veniam tenetur odit modi totam repellat reprehenderit,
+                    assumenda minus vel tempora eius ea laboriosam porro in alias! Distinctio asperiores odit aliquam
+                    dolore ratione maiores tenetur nostrum consectetur numquam quaerat nihil expedita et animi
+                    aperiam minima harum atque, soluta natus id nisi vel. Exercitationem iusto quos quaerat consequuntur
+                    ex id vero nemo qui, sapiente culpa! Aliquam,
+                    facere nobis distinctio officiis provident molestiae excepturi omnis fuga consequuntur!
+                </p>
+            </div>
+        </div>
+    </article>
+    <!--Catagary-->
+    <section>
+        <div id="category" class="category w-100 " style="height: 550px;">
+            <div class="ti-name w-100 d-flex align-items-center" style="height: 100px;">
+                <h3 style="margin-left: 150px;text-decoration:underline"><i class="fa-solid fa-table-list"></i>Category
+                </h3>
+            </div>
+            <div class="w-100 d-flex flex-column " style="height: 450px;">
+                <div class="w-100 h-50  d-flex align-items-center justify-content-center" style="gap: 100px;">
+                    <div>
+                        <a href="#" class="text-decoration-none">
+                            <div class="fast-food bg-success "
+                                style="width: 500px;height: 190px;border-radius: 3px 50px 5px 30px;">
+                                <div class="blur  d-flex justify-content-center flex-column align-items-center">
+                                    <h1 class="text-light fw-bold">Fast Food </h1>
+                                    <p class="text-light">Has alot of Flavor and many choice</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none">
+                            <div class="drink bg-success"
+                                style="width: 500px;height: 190px;border-radius: 50px 3px 30px 5px;">
+                                <div class="blur  d-flex justify-content-center flex-column align-items-center">
+                                    <h1 class="text-light fw-bold">Coffee's Drinks </h1>
+                                    <p class="text-light">Has alot of Flavor and many choice</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-100 h-50 d-flex align-items-center justify-content-center" style="gap: 100px;">
+                    <div>
+                        <a href="" class="text-decoration-none">
+                            <div class="bakery bg-success "
+                                style="width: 500px;height: 190px;border-radius: 30px 3px 50px 5px;">
+                                <div class="blur  d-flex justify-content-center flex-column align-items-center">
+                                    <h1 class="text-light fw-bold">Bakery</h1>
+                                    <p class="text-light">Has alot of Flavor and many choice</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none">
+                            <div class="spageti bg-success "
+                                style="width: 500px;height: 190px;border-radius: 3px 30px 5px 50px;">
+                                <div class="blur  d-flex justify-content-center flex-column align-items-center">
+                                    <h1 class="text-light fw-bold">Spagetti </h1>
+                                    <p class="text-light">Has alot of Flavor and many choice</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="mid-sale" class="mid-sale w-100" style="height: 500px;">
+            <div class="ti-name2 d-flex align-items-center w-100 " style="height: 100px;">
+                <h3 style="margin-left: 150px;text-decoration:underline"><i class="fa-solid fa-tag"></i>Mid Year's Sales
+                </h3>
+            </div>
+            <div class=" w-100 d-flex justify-content-center align-items-center" style="height: 400px;gap: 50px;">
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/bugerchicken.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">-40%</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Chicken cheese burger</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">10$</p>
+                            <del>15$</del>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/spagetipomodo.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">-50%</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Spaghetti Pomodoro</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">7$</p>
+                            <del>14$</del>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/cheeesecake.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">-40%</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Strawberry Cheesecake</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">10$</p>
+                            <del>18$</del>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/macha.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">-60%</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Chicken cheese burger</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">4$</p>
+                            <del>15$</del>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--combo set-->
+    <section>
+        <div id="combo" class="combo w-100 " style="height: 500px;">
+            <div class="ti-name2 d-flex align-items-center w-100 " style="height: 100px;">
+                <h3 style="margin-left: 150px;text-decoration:underline"><i class="fa-solid fa-kitchen-set"></i>Combo
+                    sets</h3>
+            </div>
+            <div class="w-100 d-flex justify-content-center align-items-center" style="height: 400px;gap: 50px;">
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/cambo1.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">Hot</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Beef Burger+FrenchFries</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">10$</p>
+
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div  class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/comboplus.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">PLUS</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Spaghetti Pomodoro</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">15$</p>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/cookie.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">-30%</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Strawberry Cheesecake</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">9$</p>
+                            <del>18$</del>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!--card-->
+                <div class="card1 shadow bg-light rounded-3 p-3" style="width: 250px;height: 330px;">
+                    <div class="img w-100 bg-info rounded-3 position-relative" style="height: 60%;">
+                        <img class="w-100 h-100 rounded-3" src="../img/drinkset2.jpg" alt="">
+                        <div class="position-absolute bg-danger rounded-5"
+                            style="width: 60px;height: 30px;top: 5px;right: 5px;">
+                            <p class="text-center text-light">Hot</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h4 class="fw-bold fs-5 mt-1">Chicken cheese burger</h4>
+                    </div>
+                    <div class="describtion">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="price-btn d-flex justify-content-between">
+                        <div class="d-flex gap-1">
+                            <p class="fw-bold fs-4">5.5$</p>
+                        </div>
+                        <div>
+                            <button onclick="increseCount()" class="btn btn-danger">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <span id="foot"></span>
+        <div class="foot w-100 bg-light d-flex" style="height: 500px;">
+            <div class="w-50 h-100  p-4 d-flex flex-column justify-content-center gap-4">
+                <div class="d-flex gap-3">
+                    <div class="logo bg-danger rounded-3 d-flex justify-content-center align-items-center"
+                        style="width: 50px;height: 50px;">
+                        <i class="fa-solid fa-utensils fs-4 text-light"></i>
+                    </div>
+                    <div class="name " style="line-height: 0.3;">
+                        <h3>KENZ.</h3>
+                        <P style="font-size: 10px;">Best Ecommerce website</P>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quis autem animi explicabo,
+                    eaque blanditiis! Fugit veniam mollitia dignissimos nostrum. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Blanditiis
+                    veniam repellat sed dolor maxime soluta illum aspernatur, expedita excepturi eum! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit.
+                    Quasi fugiat magnam assumenda illum expedita adipisci. Quasi eaque odio nesciunt recusandae
+                </p>
+                <div class="d-flex flex-column gap-2">
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot text-danger"></i>
+                        St 259,Toul kork, Phnom Penh
+                    </div>
+                    <div class="call">
+                        <i class="fa-solid fa-phone text-danger"></i>
+                        (+855) 711-431-226
+                    </div>
+                    <div class="em">
+                        <i class="fa-solid fa-envelope text-danger"></i>
+                        ndaro0761@gmail.com
+                    </div>
+                </div>
+                <div class="follow d-flex gap-3">
+                    <div class="meta bg-danger rounded-circle d-flex justify-content-center align-items-center "
+                        style="width: 40px; height: 40px;">
+                        <a href="https://web.facebook.com/">
+                            <i class="fa-brands fa-facebook fs-4 text-light"></i>
+                        </a>
+                    </div>
+                    <div class="meta bg-danger rounded-circle d-flex justify-content-center align-items-center"
+                        style="width: 40px; height: 40px;">
+                        <a href="https://www.instagram.com/?hl=en">
+                            <i class="fa-brands fa-instagram fs-4 text-light"></i>
+                        </a>
+                    </div>
+                    <div class="meta bg-danger rounded-circle d-flex justify-content-center align-items-center"
+                        style="width: 40px; height: 40px;">
+                        <a href="https://web.telegram.org/a/">
+                            <i class="fa-brands fa-telegram fs-4 text-light"></i>
+                        </a>
+                    </div>
+                    <div class="meta bg-danger rounded-circle d-flex justify-content-center align-items-center"
+                        style="width: 40px; height: 40px;">
+                        <a href="https://github.com/">
+                            <i class="fa-brands fa-github fs-4 text-light"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-100 h-100 border-top d-flex justify-content-between">
+                    <div>
+                        <p style="font-size: 13px; color: gray;">&copy:2026 Fast Food Fast Service</p>
+                    </div>
+                    <div class=" d-flex gap-2">
+                        <p style="font-size: 13px; color: gray;">Privacy Policy</p>
+                        <p style="font-size: 13px; color: gray;">Terms of Service</p>
+                        <p style="font-size: 13px; color: gray;">Cookie Pocky</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-50 h-100 p-4 d-flex justify-content-evenly ">
+                <div class="quick-link mt-5">
+                    <h4>Quick Link</h4>
+                    <ul  class="list-unstyled d-flex flex-column gap-3 ">
+                        <li>
+                            <a href="#top" class= "under text-dark">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">About us</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Fast Food</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Drink</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Bakery</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Spagetti</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-danger">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="support  mt-5">
+                    <h4>Support</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3 ">
+                        <li>
+                            <a href="" class="under text-dark">Helps Center</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Booking Support</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Emergency Contact</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="" class="under text-dark">Shopping Info</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="index.js">
+        AOS.init({
+            duration: 1000, // Animation duration (ms)
+            once: true,     // Animate only once
+        });
+    </script>
+
+</html>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Archivo+Black&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Chewy&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Metal&family=Oxygen:wght@300;400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+    #bell {
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+    }
+
+    #bell:hover {
+        background-color: rgba(115, 77, 77, 0.468);
+    }
+
+    #heart {
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+    }
+
+    #heart:hover {
+        background-color: rgba(115, 77, 77, 0.468);
+    }
+
+    #cart {
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+    }
+
+    #cart:hover {
+        background-color: rgba(115, 77, 77, 0.468);
+    }
+
+    .main {
+        background-image: url('https://i.pinimg.com/736x/07/b2/fc/07b2fc6f673cc204c161796955ede9a8.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .fast-food{
+        background-image: url('../img/fastfoood.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .fast-food .blur{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(44, 27, 27, 0.379);
+        border-radius: 3px 50px 5px 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .fast-food:hover .blur{
+        opacity: 1;
+    }
+    
+    .drink{
+        background-image: url('../img/drink.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .drink .blur{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(44, 27, 27, 0.379);
+       border-radius: 50px 3px 30px 5px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .drink:hover .blur{
+        opacity: 1;
+    }
+    .bakery{
+        background-image: url('../img/bakeery.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+     .bakery .blur{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(44, 27, 27, 0.379);
+       border-radius: 30px 3px 50px 5px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .bakery:hover .blur{
+        opacity: 1;
+    }
+    .spageti{
+        background-image: url('../img/spageti.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+     .spageti .blur{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(44, 27, 27, 0.379);
+      border-radius: 3px 30px 5px 50px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .spageti:hover .blur{
+        opacity: 1;
+    }
+   .card1:hover{
+        transform: translateY(-7px);
+        transition: all 0.3s ease-in-out;
+   }
+.under{
+    text-decoration: none;
+}
+.under:hover{
+    text-decoration: underline;
+}
+#leave-icon{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+#leave-icon:hover{
+    color: rgb(223, 59, 53);
+}
